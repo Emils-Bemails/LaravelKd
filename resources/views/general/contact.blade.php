@@ -1,0 +1,1 @@
+{{$name}} , {{$email}} ir atsūtijis sekojošu atsauksmi: "{{$response}}"

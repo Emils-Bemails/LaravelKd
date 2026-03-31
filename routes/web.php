@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/general/contact', ["name" => "Janis", "email" => "janis@example.com", "response" => "Jūsu mājaslapa ir izcila!"]);
 });
 
 Route::get('/books', [BookController::class, 'index']);

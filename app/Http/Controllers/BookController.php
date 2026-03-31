@@ -18,8 +18,8 @@ class BookController extends Controller
 
     public function store(Request $request) {
         $book = Book::create([
-            'author' => $request['author'],
-            'released_at' => $request['released_at'],
+            'author' => $request->input('author'),
+            'title' => $request->input('title'),
         ]);
 
         return redirect('/books/' . $book->id);
@@ -30,8 +30,9 @@ class BookController extends Controller
         return view('books.show', ['singleBook' => $book]);
     }
 
-    public function edit($id) {
+    public function edit($id, Request $request) {
         $book = Book::find($id);
+        
         return view('books.edit', ['editBook' => $book]);
     }
 
