@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('/books', [BookController::class, 'index']);
-Route::get('/books/create', [BookController::class, 'update']);
+Route::get('/books/create', [BookController::class, 'create']);
 Route::post('/books', [BookController::class, 'store']);
 Route::get('/books/{id}', [BookController::class, 'show']);
 Route::get('/books/{id}/edit', [BookController::class, 'edit']);
